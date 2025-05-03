@@ -3,8 +3,8 @@ let defaultAway = 00
 
 let homeDisplay = document.getElementById("homeScore")
 let awayDisplay = document.getElementById("awayScore")
-let homeButtonArea = document.querySelectorAll("#homeButtonArea")
-let awayButtonArea = document.querySelectorAll("#awayButtonArea")
+let homeButtons = document.querySelectorAll("#homeButtonArea .scoreBtn")
+let awayButtons = document.querySelectorAll("#awayButtonArea .scoreBtn")
 let newGameBtn = document.getElementById("newGame")
 
 
@@ -23,7 +23,7 @@ function checkClass() {
 
 
 
-homeButtonArea.forEach(button => {
+homeButtons.forEach(button => {
     button.addEventListener('click', (event) => {
        const buttonValue = event.target.value;
       defaultHome += Number(event.target.value)
@@ -33,7 +33,7 @@ homeButtonArea.forEach(button => {
     });
   })
   
-  awayButtonArea.forEach(button => {
+  awayButtons.forEach(button => {
     button.addEventListener('click', (event) => {
        const buttonValue = event.target.value;
       defaultAway += Number(event.target.value)
